@@ -10,17 +10,31 @@ import { NgStyle } from '@angular/common';
 export class GameComponent implements OnInit {
 
   bottom = 0;
-
+isJump=false;
+isDoubleJump = false;
   constructor() { 
+    var time = 500;
     document.addEventListener ("keydown", event => {
       console.log(event);
-      if (event.keyCode === 38)
+      if (event.keyCode === 38 && (this.isJump===false || this.isDoubleJump===false))
       {
-        this.bottom=128;
+        this.bottom=50;
         console.log(this.bottom);
+        if(!this.isDoubleJump && this.isJump===true){
+          {this.isDoubleJump=true;
+            this.bottom=this.bottom+25;
+          time=time+500;
+          }
+          
+        }
+        this.isJump = true;
         setTimeout(() => {
-          this.bottom=0;        
-        }, 500);
+          this.bottom=0;
+          time=500;       
+          this.isDoubleJump = false;
+          this.isJump = false; 
+        }, time);
+
       }
 
     });

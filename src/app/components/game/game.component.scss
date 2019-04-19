@@ -1,19 +1,23 @@
 .container {
+  align-items: flex-end;
+  justify-content: flex-start;
   margin: auto;
   width: 1600px;
   height: 900px;
   background: gray;
 
-  > div {
-    width: 500px;
-    height: 300px;
+
+  > .jesus-container {
+    width: 128px;
+    height: 800px;
     position: relative;
     background: green;
-
+    left: 100px;
+    bottom: 100px;
     .jfc {
       position: absolute;
       bottom: 0;
-      right: 0;
+      left: 0;
       box-sizing: border-box;
       border: 1px solid black;
       transition: all 0.5s;
