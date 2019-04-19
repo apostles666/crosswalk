@@ -16,7 +16,7 @@ export class GameComponent implements OnInit {
       console.log(event);
       if (event.keyCode === 38)
       {
-        this.bottom=20;
+        this.bottom=128;
         console.log(this.bottom);
         setTimeout(() => {
           this.bottom=0;        

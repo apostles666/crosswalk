@@ -1,21 +1,20 @@
-.sample {
-  width: 1000px;
-  height: 800px;
+.container {
+  margin: auto;
+  width: 1600px;
+  height: 900px;
   background: gray;
 
-  div {
+  > div {
     width: 500px;
     height: 300px;
     position: relative;
     background: green;
 
-    .box {
-      width: 26px;
-      height: 26px;
+    .jfc {
       position: absolute;
       bottom: 0;
       right: 0;
-      background: red;
+      box-sizing: border-box;
       border: 1px solid black;
       transition: all 0.5s;
     }
