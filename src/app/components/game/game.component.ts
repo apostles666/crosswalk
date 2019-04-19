@@ -16,7 +16,8 @@ isDoubleJump = false;
     var time = 500;
     document.addEventListener ("keydown", event => {
       console.log(event);
-      if (event.keyCode === 38 && (this.isJump===false || this.isDoubleJump===false))
+      //added "w" button steering (keycode: 87)
+      if ((event.keyCode === 38 || event.keyCode === 87) && (this.isJump===false || this.isDoubleJump===false))
       {
         this.bottom=50;
         console.log(this.bottom);
@@ -25,7 +26,6 @@ isDoubleJump = false;
             this.bottom=this.bottom+25;
           time=time+500;
           }
-          
         }
         this.isJump = true;
         setTimeout(() => {
