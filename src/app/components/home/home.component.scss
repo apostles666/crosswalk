@@ -2,9 +2,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
+    background-image: url(../../../assets/wood_texture.jpg);
+    background-repeat: repeat;
+    background-position: center;
+    box-sizing: border-box;
+    border: 10px solid rgba(black,0.5);
+    .menu{
+        width: 800px;
+        height: 600px;
+        background: rgba(black,0.2);
+        box-sizing: border-box;
+        border: 7px solid rgba(black,0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;      box-shadow: 0 4px 0 rgba(black, 0.6);
 
-    button {
-        border: none;
-        font-size: 1em;
     }
+
 }
