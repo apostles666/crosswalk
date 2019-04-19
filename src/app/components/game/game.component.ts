@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { on } from 'cluster';
+import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-game',
@@ -7,7 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameComponent implements OnInit {
 
-  constructor() { }
+  bottom = 0;
+
+  constructor() { 
+    document.addEventListener ("keydown", event => {
+      console.log(event);
+      if (event.keyCode === 38)
+      {
+        this.bottom=20;
+        console.log(this.bottom);
+        setTimeout(() => {
+          this.bottom=0;        
+        }, 500);
+      }
+
+    });
+  }
+
 
   ngOnInit() {
   }

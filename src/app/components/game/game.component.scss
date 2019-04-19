@@ -1,0 +1,23 @@
+.sample {
+  width: 1000px;
+  height: 800px;
+  background: gray;
+
+  div {
+    width: 500px;
+    height: 300px;
+    position: relative;
+    background: green;
+
+    .box {
+      width: 26px;
+      height: 26px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: red;
+      border: 1px solid black;
+      transition: all 0.5s;
+    }
+  }
+}
