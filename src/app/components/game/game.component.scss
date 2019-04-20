@@ -4,7 +4,13 @@
   margin: auto;
   width: 1600px;
   height: 900px;
-  background: gray;
+  background-color: gray;
+  background-image: url(../../../assets/texture_stone.png);
+  background-repeat: repeat-x;
+  background-size: 100px;
+  background-position: bottom;
+  background-position-x: 0;
+  animation: floor_moves 0.2s step-end infinite;
 
 
   > .jesus-container {
@@ -14,7 +20,7 @@
     background: green;
     left: 100px;
     bottom: 100px;
-    
+
     .jfc {
       position: absolute;
       bottom: 0;
@@ -23,5 +29,22 @@
       border: 1px solid black;
       transition: all 0.5s;
     }
+  }
+}
+@keyframes floor_moves {
+  0% {
+    background-position-x:  0;
+  }
+  25% {
+    background-position-x: 25%;
+  }
+  50% {
+    background-position-x: 50%;
+  }
+  75% {
+    background-position-x: 75%;
+  }
+  100% {
+    background-position-x: 100%;
   }
 }

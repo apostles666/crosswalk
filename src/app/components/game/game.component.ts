@@ -16,16 +16,17 @@ isDoubleJump = false;
     var time = 500;
     document.addEventListener ("keydown", event => {
       console.log(event);
+
       //added "w" button steering (keycode: 87)
-      if ((event.keyCode === 38 || event.keyCode === 87) && (this.isJump===false || this.isDoubleJump===false))
-      {
+
+      if ((event.keyCode === 38 || event.keyCode === 87) && (this.isJump===false || this.isDoubleJump===false)) {
         this.bottom=50;
         console.log(this.bottom);
-        if(!this.isDoubleJump && this.isJump===true){
-          {this.isDoubleJump=true;
-            this.bottom=this.bottom+25;
-          time=time+500;
-          }
+        if (!this.isDoubleJump && this.isJump===true){
+            {this.isDoubleJump=true;
+              this.bottom=this.bottom+25;
+            time=time+500;
+            }
         }
         this.isJump = true;
         setTimeout(() => {
